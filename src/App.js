@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 import WeatherApp from "./components/WeatherApp";
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-    return (
-        <div className="App">
-            <WeatherApp />
-        </div>
-    );
+  return (
+    <div className="App">
+      <WeatherApp />
+    </div>
+  );
 }
 
 export default App;
