@@ -4,11 +4,11 @@ import { faSun } from "@fortawesome/free-regular-svg-icons";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
 
-const WeatherApp = () => {
+const WeatherApp = (props) => {
   return (
     <div className="container">
       <div className="cards">
-        <h1>London</h1>
+        <h1>{props.city}, {props.country}</h1>
         <h5 className="py-4">
           <FontAwesomeIcon icon={faSun} className="display-3" />
         </h5>
