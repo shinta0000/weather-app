@@ -12,10 +12,10 @@ const WeatherApp = (props) => {
         <h5 className="py-4">
           <FontAwesomeIcon icon={faSun} className="display-3" />
         </h5>
-        <h1 className="py-2">25&deg;</h1>
-        {minmaxTemp(24, 19)}
+        <h1 className="py-2">{props.temp_celsius}&deg;</h1>
+        {minmaxTemp(props.temp_min, props.temp_max)}
 
-        <h4 className="py-4">Slow Rain</h4>
+        <h4 className="py-4">{props.description}</h4>
       </div>
     </div>
   );
