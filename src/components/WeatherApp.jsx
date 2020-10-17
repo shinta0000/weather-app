@@ -5,12 +5,26 @@ import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
 
 const WeatherApp = (props) => {
+  const nowWeather = props.weatherIcon;
+  // let box; 
+  // if (nowWeather === "faSun") {
+  //   let box = <FontAwesomeIcon icon={faSun} className="display-3" />;
+  // } else if (nowWeather === "faUmbrella") {
+  //   let box = <FontAwesomeIcon icon={faUmbrella} className="display-3" />;
+  // }
+  let item;
+  if (nowWeather === "faSun") {
+    item = faSun;
+  } else if (nowWeather === "faUmbrella") {
+    item = faUmbrella;
+  }
+  const box = <FontAwesomeIcon icon={item} className="display-3" />;
   return (
     <div className="container">
       <div className="cards">
         <h1>{props.city}, {props.country}</h1>
         <h5 className="py-4">
-          <FontAwesomeIcon icon={faSun} className="display-3" />
+          {box}
         </h5>
         <h1 className="py-2">{props.temp_celsius}&deg;</h1>
         {minmaxTemp(props.temp_min, props.temp_max)}
