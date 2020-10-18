@@ -23,7 +23,13 @@ class App extends React.Component {
     this.getWeather();
 
     this.weatherIcon = {
-      Thunderstorm: "faUmbrella",
+      Thunderstorm: "faBolt",
+      Drizzle: "faCloudRain",
+      Rain: "faUmbrella",
+      Snow: "faSnowflake",
+      Atmosphere: "faSmog",
+      Clear: "faSun",
+      Clouds: "faCloud",
     };
   }
 
@@ -49,7 +55,7 @@ class App extends React.Component {
       temp_max: this.calCelsius(response.main.temp_max),
       temp_min: this.calCelsius(response.main.temp_min),
       description: response.weather[0].description,
-      icon: this.weatherIcon.Thunderstorm,
+      icon: this.weatherIcon.Snow,
     });
   };
 

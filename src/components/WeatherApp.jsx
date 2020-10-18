@@ -1,23 +1,28 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun } from "@fortawesome/free-regular-svg-icons";
-import { faCloud } from "@fortawesome/free-solid-svg-icons";
-import { faUmbrella } from "@fortawesome/free-solid-svg-icons";
+// import { faSun } from "@fortawesome/free-regular-svg-icons";
+import { faCloud, faUmbrella, faBolt, faCloudRain, faSnowflake, faSmog, faSun } from "@fortawesome/free-solid-svg-icons";
 
 const WeatherApp = (props) => {
   const nowWeather = props.weatherIcon;
-  // let box; 
-  // if (nowWeather === "faSun") {
-  //   let box = <FontAwesomeIcon icon={faSun} className="display-3" />;
-  // } else if (nowWeather === "faUmbrella") {
-  //   let box = <FontAwesomeIcon icon={faUmbrella} className="display-3" />;
-  // }
   let item;
+  // "faSun"という文字列ではなくfaSunとアイコンを代入することによって正しく表示された
   if (nowWeather === "faSun") {
     item = faSun;
   } else if (nowWeather === "faUmbrella") {
     item = faUmbrella;
+  } else if (nowWeather === "faCloud") {
+    item = faCloud;
+  } else if (nowWeather === "faBolt") {
+    item = faBolt;
+  } else if (nowWeather === "faCloudRain") {
+    item = faCloudRain;
+  } else if (nowWeather === "faSnowflake") {
+    item = faSnowflake;
+  } else if (nowWeather === "faSmog") {
+    item = faSmog;
   }
+
   const box = <FontAwesomeIcon icon={item} className="display-3" />;
   return (
     <div className="container">
