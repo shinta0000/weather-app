@@ -26,7 +26,7 @@ const WeatherApp = (props) => {
   const box = <FontAwesomeIcon icon={item} className="display-3" />;
   return (
     <div className="container">
-      <div className="cards">
+      <div className="cards pt-4">
         <h1>{props.city}, {props.country}</h1>
         <h5 className="py-4">
           {box}

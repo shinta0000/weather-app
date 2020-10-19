@@ -2,6 +2,7 @@ import React from "react";
 import WeatherApp from "./components/WeatherApp";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Form from "./components/form.component";
 
 // api call api.openweathermap.org/data/2.5/weather?q=London,uk&appid={API key}
 const API_KEY = "6e967f70361c5d470b132b20e7903fbd";
@@ -92,6 +93,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Form />
         <WeatherApp
           city={this.state.city}
           country={this.state.country}
